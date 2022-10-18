@@ -1,4 +1,4 @@
 test file
 
-backend.image: jeeseob/groom_backend:45
+backend.image: jeeseob/groom_backend:20
 backend_reservation.image: jeeseob/groom_backend_reservation:0
