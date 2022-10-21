@@ -1,4 +1,4 @@
 test file
 
-backend.image: jeeseob/baromukja_backend_reservation:33
-backend_reservation.image: jeeseob/groom_backend:109
+backend.image: jeeseob/baromukja_backend:109
+backend_reservation.image: jeeseob/baromukja_backend_reservation:33
