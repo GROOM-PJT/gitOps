@@ -1,20 +1,13 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: groom-reservation-hpa
-  namespace: backend
+  name: groom-reservation-hpa
+  namespace: backend
 spec:
-  maxReplicas: 10
+  maxReplicas: 15
   minReplicas: 5
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
     name: groom-reservation-deployment
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 30
-
+  targetCPUUtilizationPercentage: 40
