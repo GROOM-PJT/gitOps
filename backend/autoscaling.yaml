@@ -1,19 +1,30 @@
-apiVersion: autoscaling/v2beta1
+apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: groom-backend-hpa
-  labels:
-    app: groom-backend-hpa
+  name: groom-backend-hpa
   namespace: backend
 spec:
-  maxReplicas: 10
-  minReplicas: 3
-  scaleTargetRef:
-    apiVersion: apps/v1 
-    kind: Deployment
-    name: groom-backend-deployment
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: groom-backend-deployment
+  minReplicas: 3
+  maxReplicas: 10
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Percent
+        value: 10
+        periodSeconds: 300
+      - type: Pods
+        value: 1
+        periodSeconds: 120 
+      selectPolicy: Min
   metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      targetAverageUtilization: 5
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50 # scale up 기준 값.
