@@ -10,11 +10,11 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: groom-reservation-deployment
-metrics:
-- type: Resource
-  resource:
-    name: cpu
-    target:
-      type: Utilization
-      averageUtilization: 30
-      
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 30
+
