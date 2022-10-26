@@ -23,4 +23,4 @@ spec:                         # deployment의 스펙을 정의
           requests:
             cpu: "500m"
           limits:
-            cpu: "1k"
+            cpu: "700m"
