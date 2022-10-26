@@ -8,7 +8,7 @@ spec:
   type:  LoadBalancer    # 서비스 타입
   ports:
   - port: 8080       # 서비스 포트
-    targetPort: 80   # 타켓, 즉 pod의 포트
+    targetPort: 9091   # 타켓, 즉 pod의 포트
     protocol: TCP
     name: http
   selector:
