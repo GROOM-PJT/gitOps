@@ -19,4 +19,4 @@ spec:                         # deployment의 스펙을 정의
       - name: backend          
         image: jeeseob/baromukja_backend:130
         ports:
-        - containerPort: 80
+        - containerPort: 9091
