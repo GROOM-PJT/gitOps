@@ -4,10 +4,10 @@ metadata:
   name: groom-backend-hpa
   namespace: backend
 spec:
-  maxReplicas: 7
+  maxReplicas: 10
   minReplicas: 3
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: groom-backend-deployment
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 70
