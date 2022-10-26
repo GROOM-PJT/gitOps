@@ -16,6 +16,6 @@ spec:                         # deployment의 스펙을 정의
     spec:
       containers:             # 컨테이너 설정
       - name: reservation          
-        image: jeeseob/baromukja_backend_reservation:48
+        image: jeeseob/baromukja_backend_reservation:57
         ports:
         - containerPort: 9090
