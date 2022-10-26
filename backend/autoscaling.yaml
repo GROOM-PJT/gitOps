@@ -2,6 +2,8 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: groom-backend-hpa
+  labels:
+    app: groom-backend-hpa
   namespace: backend
 spec:
   maxReplicas: 10
