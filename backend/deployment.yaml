@@ -20,3 +20,8 @@ spec:                         # deployment의 스펙을 정의
         image: jeeseob/baromukja_backend:136
         ports:
         - containerPort: 9091
+        resources:
+          requsets:
+            cpu: "300m"
+          limits:
+            cpu: "500m"
