@@ -10,4 +10,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: groom-reservation-deployment
-  targetCPUUtilizationPercentage: 40
+  targetCPUUtilizationPercentage: 70
