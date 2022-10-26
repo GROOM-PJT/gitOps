@@ -17,6 +17,6 @@ spec:                         # deployment의 스펙을 정의
     spec:
       containers:             # 컨테이너 설정
       - name: backend          
-        image: nginx:1.14.2
+        image: jeeseob/baromukja_backend:130
         ports:
         - containerPort: 80
