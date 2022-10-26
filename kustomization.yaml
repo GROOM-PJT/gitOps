@@ -1,6 +1,0 @@
-
-
-test file
-
-backend.image: jeeseob/groom_backend:0
-backend_reservation.image: jeeseob/groom_backend_reservation:0
