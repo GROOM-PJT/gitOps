@@ -22,6 +22,6 @@ spec:                         # deployment의 스펙을 정의
         - containerPort: 9091
         resources:
           requests:
-            cpu: "400m"
+            cpu: "300m"
           limits:
             cpu: "700m"
