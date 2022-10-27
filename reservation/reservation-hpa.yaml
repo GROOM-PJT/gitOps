@@ -5,7 +5,7 @@ metadata:
   namespace: backend
 spec:
   maxReplicas: 15
-  minReplicas: 5
+  minReplicas: 3
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
